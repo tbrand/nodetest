@@ -1,3 +1,3 @@
-const miner = require('./lib/miner');
+const client = require('./lib/client');
 
-miner.start('http://127.0.0.1:3000', 2);
+client.start('http://127.0.0.1:3000', 2);
