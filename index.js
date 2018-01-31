@@ -11,6 +11,11 @@ if (cluster.isMaster) {
     processes.push(process);
   }
 
+  const messageHandler = function(message) {
+    console.log(`nonce coming!: ${message.nonce}`);
+  };
+
+  client.setup();
   client.connect(url, processes);
 } else {
   require('./lib/miner');
